@@ -10,7 +10,7 @@ export class HeatmapController {
 
   @UseGuards(AuthGuard('jwt'))
   @Get()
-  async getHeatmap(@Body("city") city) {
+  async getHeatmap(@Body('city') city) {
     if (!city) {
       throw new HttpException('city is required', HttpStatus.BAD_REQUEST);
     }
